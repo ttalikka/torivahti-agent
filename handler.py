@@ -71,8 +71,12 @@ def showNew(item):
     if newItemCount == 0:
         print("No new items for this search")
     # If new results were found, send them to the user
-    # TODO: If we do return results to the user, mark the latest result to the database
     else:
+        table.update_item(
+            Key={"id": item["id"]},
+            UpdateExpression="SET latest = :latest",
+            ExpressionAttributeValues={":latest": itemlist[0]["id"]},
+        )
         sendMessage({"text": response.encode("utf8"), "chat_id": item["chat"]})
 
 
