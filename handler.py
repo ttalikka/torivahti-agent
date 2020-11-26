@@ -2,6 +2,7 @@
 import json
 import os
 import sys
+import stringlibrary
 
 here = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.join(here, "./vendored"))
@@ -10,7 +11,6 @@ sys.path.append(os.path.join(here, "./vendored"))
 import requests
 import boto3
 from bs4 import BeautifulSoup
-import stringlibrary
 
 # Base variables
 TOKEN = os.environ["TELEGRAM_TOKEN"]
