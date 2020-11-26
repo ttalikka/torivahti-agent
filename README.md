@@ -8,7 +8,6 @@ Torivahti-agent is the backend agent which runs on a schedule in AWS Lambda, sea
 Torivahti "frontend" (chatbot) code can be found here: https://github.com/ttalikka/torivahti
 
 ## TODO
-* Database updating when new items are found
 * Better user experience
 
 ### DynamoDB schema
