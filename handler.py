@@ -53,7 +53,9 @@ def showNew(item):
     newItem = True
     newItemCount = 0
     # Build the base response
-    response = "{} ({}):\n".format(stringlibrary.NEW_ITEM, item["searchQuery"])
+    response = "{} ({}):\n".format(
+        stringlibrary.NEW_ITEM, item["searchQuery"].replace("+", " ").title()
+    )
     # Loop through all the items in the retrieved items...
     for n in itemlist:
         # If we haven't seen the item that is marked as the latest returned in the database...
